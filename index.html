@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythreyan S — Full-Stack Developer & AI Builder</title>
+  <meta name="description" content="Portfolio of Mythreyan S, final-year B.E. Computer Science student and Full-Stack Developer & AI Builder. Building scalable web architectures with Django, FastAPI, React.js, and autonomous LLM workflows.">
+  <meta name="keywords" content="Mythreyan S, Full-Stack Developer, AI Builder, React.js, Django, FastAPI, Python, Autonomous AI Agent, Web Developer Portfolio, Chennai, Vaniyambadi">
+  <meta name="author" content="Mythreyan S">
+  <meta name="theme-color" content="#070709" id="meta-theme-color">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mythreyan26.github.io/">
+  <meta property="og:title" content="Mythreyan S — Full-Stack Developer & AI Builder">
+  <meta property="og:description" content="I build modern web applications, intelligent AI systems, and polished digital experiences.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/mythreyan26/mythreyan26/main/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mythreyan S — Full-Stack Developer & AI Builder">
+  <meta name="twitter:description" content="I build modern web applications, intelligent AI systems, and polished digital experiences.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070709'/%3E%3Ccircle cx='32' cy='32' r='28' stroke='rgba(255,255,255,0.1)' stroke-width='2' fill='none'/%3E%3Cpath d='M18 46V18l14 18 14-18v28' fill='none' stroke='%2338bdf8' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='46' r='3.5' fill='%2338bdf8'/%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Premium Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-monogram">
+        <span class="preloader-text">MS</span>
+        <div class="preloader-ring"></div>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar" id="preloader-bar"></div>
+      </div>
+      <div class="preloader-status" id="preloader-status">INITIALIZING SYSTEM</div>
+    </div>
+  </div>
+
+  <!-- SVG Icon Library -->
+  <svg width="0" height="0" style="position:absolute; display:none;" aria-hidden="true">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 7 9-7"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="12 5 19 12 12 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+  </svg>
+
+  <!-- Sticky Dynamic Navigation -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="nav-brand" aria-label="Mythreyan S Portfolio Home">
+        <span class="brand-monogram">MS</span>
+        <span class="brand-name">Mythreyan<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Control Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle Dark/Light mode">
+          <svg class="theme-icon light-icon"><use href="#icon-sun"/></svg>
+          <svg class="theme-icon dark-icon"><use href="#icon-moon"/></svg>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-outline btn-sm nav-resume-btn" id="open-resume-btn" aria-label="Preview Resume">
+          <span>Resume</span>
+          <svg class="icon-sm"><use href="#icon-external"/></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="menu-burger" id="menu-burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobile-backdrop"></div>
+    <div class="mobile-drawer-panel">
+      <div class="mobile-drawer-header">
+        <span class="brand-monogram">MS</span>
+        <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#capabilities" class="mobile-link">Capabilities</a>
+        <a href="#projects" class="mobile-link">Featured Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="assets/Mythreyan_S_Resume.pdf" class="btn btn-primary btn-block" download="Mythreyan_S_Resume.pdf">
+          <svg><use href="#icon-download"/></svg>
+          <span>Download Resume</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- 01 HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+      <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Status Pill -->
+        <div class="hero-pill-badge hero-entrance-0">
+          <span class="status-indicator"></span>
+          <span class="status-text">Available for Full-Stack &amp; Software Engineering Roles</span>
+        </div>
+
+        <!-- Hero Headline -->
+        <div class="hero-typography">
+          <h1 class="hero-title">
+            <span class="hero-name-eyebrow hero-entrance-1">MYTHREYAN S</span>
+            <span class="hero-main-title text-gradient hero-entrance-2">Full-Stack Developer &amp; AI Builder</span>
+          </h1>
+          <p class="hero-subtitle hero-entrance-3">
+            I build modern web applications, intelligent AI systems, and polished digital experiences.
+          </p>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-cta-group hero-entrance-4">
+          <a href="#projects" class="btn btn-primary magnetic-btn hero-primary-cta">
+            <span>View Projects</span>
+            <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+          </a>
+          <a href="assets/Mythreyan_S_Resume.pdf" class="btn btn-secondary magnetic-btn" download="Mythreyan_S_Resume.pdf">
+            <svg class="icon-sm"><use href="#icon-download"/></svg>
+            <span>Download Resume</span>
+          </a>
+          <button class="btn btn-ghost magnetic-btn" id="hero-preview-resume-btn" aria-label="Open Resume Preview">
+            <svg class="icon-sm"><use href="#icon-external"/></svg>
+            <span>Preview CV</span>
+          </button>
+        </div>
+
+        <!-- Social Proof Bar -->
+        <div class="hero-social-strip hero-entrance-5">
+          <div class="social-links">
+            <a href="https://github.com/mythreyan26" target="_blank" rel="noopener noreferrer" class="social-item" aria-label="GitHub Profile">
+              <svg><use href="#icon-github"/></svg>
+              <span>github.com/mythreyan26</span>
+            </a>
+            <span class="social-separator">/</span>
+            <a href="https://linkedin.com/in/mythreyan26" target="_blank" rel="noopener noreferrer" class="social-item" aria-label="LinkedIn Profile">
+              <svg><use href="#icon-linkedin"/></svg>
+              <span>linkedin.com/in/mythreyan26</span>
+            </a>
+            <span class="social-separator">/</span>
+            <a href="mailto:mythreyan.vnb@gmail.com" class="social-item" aria-label="Email Mythreyan">
+              <svg><use href="#icon-mail"/></svg>
+              <span>mythreyan.vnb@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Architecture Telemetry Console -->
+        <div class="hero-console hero-entrance-6" aria-label="Interactive Developer Telemetry">
+          <div class="console-header">
+            <div class="console-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-amber"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="console-title">mythreyan-s-runtime — zsh — 80x24</div>
+            <div class="console-badge">CORE STACK</div>
+          </div>
+          <div class="console-body">
+            <div class="console-line">
+              <span class="prompt-symbol">$</span>
+              <span class="cmd-text">curl -s https://api.mythreyan.dev/v1/engineer/status | jq .</span>
+            </div>
+            <div class="console-response">
+              <span class="json-bracket">{</span>
+              <div class="json-indent">
+                <span class="json-key">"engineer"</span>: <span class="json-string">"Mythreyan S"</span>,<br>
+                <span class="json-key">"education"</span>: <span class="json-string">"B.E. Computer Science &amp; Engineering (2023–2027)"</span>,<br>
+                <span class="json-key">"specialization"</span>: <span class="json-bracket">[</span><span class="json-string">"Full-Stack Web Architectures"</span>, <span class="json-string">"Autonomous AI Workflows"</span><span class="json-bracket">]</span>,<br>
+                <span class="json-key">"core_stack"</span>: <span class="json-bracket">{</span><br>
+                &nbsp;&nbsp;<span class="json-key">"backend"</span>: <span class="json-bracket">[</span><span class="json-string">"Django"</span>, <span class="json-string">"FastAPI"</span>, <span class="json-string">"SSE"</span>, <span class="json-string">"REST"</span><span class="json-bracket">]</span>,<br>
+                &nbsp;&nbsp;<span class="json-key">"frontend"</span>: <span class="json-bracket">[</span><span class="json-string">"React.js"</span>, <span class="json-string">"Tailwind CSS"</span>, <span class="json-string">"ES6+"</span><span class="json-bracket">]</span>,<br>
+                &nbsp;&nbsp;<span class="json-key">"ai_orchestration"</span>: <span class="json-string">"LLM API Multi-Step DAG &amp; Fallbacks"</span><br>
+                <span class="json-bracket">}</span>,<br>
+                <span class="json-key">"featured_projects"</span>: <span class="json-bracket">[</span><span class="json-string">"ShopKart (SSE E-Commerce)"</span>, <span class="json-string">"KIN (Autonomous AI Agent)"</span><span class="json-bracket">]</span>,<br>
+                <span class="json-key">"status"</span>: <span class="json-string text-emerald">"OPEN_FOR_OPPORTUNITIES"</span>
+              </div>
+              <span class="json-bracket">}</span>
+            </div>
+            <div class="console-footer">
+              <span class="footer-item"><span class="ping-pulse"></span> VERIFIED ACADEMIC PROFILE</span>
+              <span class="footer-item">LOCATION: Vaniyambadi, Tamil Nadu, India</span>
+              <span class="footer-item">CGPA: 7.5 / 10</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 ABOUT SECTION -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">01 / PHILOSOPHY &amp; BACKGROUND</span>
+          <h2 class="section-title">Engineered with Intent.</h2>
+          <p class="section-lead">A disciplined approach to building resilient backend systems, intelligent AI workflows, and responsive user experiences.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story Block -->
+          <div class="about-narrative-card reveal">
+            <h3 class="card-headline">About Mythreyan</h3>
+            <p class="paragraph-lg">
+              I am a final-year <strong>B.E. Computer Science and Engineering</strong> student at <strong>P.S.V. College of Engineering and Technology</strong> (2023–2027) with a strong foundation in full-stack architecture and AI systems integration.
+            </p>
+            <p class="paragraph">
+              My engineering philosophy revolves around solving real-world problems with practical, well-architected software. Rather than building shallow prototypes, I specialize in production-level paradigms: designing robust REST APIs with Django and FastAPI, orchestrating resilient LLM workflows with fallback handling, managing real-time data streams via Server-Sent Events (SSE), and crafting responsive, accessible user interfaces with React and Tailwind CSS.
+            </p>
+            <p class="paragraph">
+              Having completed internships in both <strong>UI/UX Design</strong> at SkillSync and <strong>Web Development</strong> at NSIC Chennai, I bring a unique dual perspective—bridging user research and interactive Figma wireframes directly to clean, scalable, and cross-browser verified code.
+            </p>
+
+            <div class="about-key-points">
+              <div class="key-point-item">
+                <div class="key-icon"><svg><use href="#icon-check"/></svg></div>
+                <div>
+                  <strong>Full-Stack Mastery</strong>
+                  <span>From relational SQL schemas to high-performance client rendering.</span>
+                </div>
+              </div>
+              <div class="key-point-item">
+                <div class="key-icon"><svg><use href="#icon-check"/></svg></div>
+                <div>
+                  <strong>Autonomous AI Systems</strong>
+                  <span>Prompt-to-DAG orchestration with automated provider fallback.</span>
+                </div>
+              </div>
+              <div class="key-point-item">
+                <div class="key-icon"><svg><use href="#icon-check"/></svg></div>
+                <div>
+                  <strong>UI/UX Integration</strong>
+                  <span>Figma wireframes to accessible, semantic frontend implementations.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Factual Metrics -->
+          <div class="about-metrics-col">
+            <div class="metric-card reveal">
+              <span class="metric-value">7.5</span>
+              <span class="metric-label">Academic CGPA</span>
+              <span class="metric-sub">P.S.V. College of Engineering &amp; Technology</span>
+            </div>
+            <div class="metric-card reveal">
+              <span class="metric-value">2</span>
+              <span class="metric-label">Industry Internships</span>
+              <span class="metric-sub">UI/UX (SkillSync) &amp; Web Dev (NSIC)</span>
+            </div>
+            <div class="metric-card reveal">
+              <span class="metric-value">2</span>
+              <span class="metric-label">Featured Projects</span>
+              <span class="metric-sub">ShopKart (Django/React) &amp; KIN (AI Agent)</span>
+            </div>
+            <div class="metric-card reveal">
+              <span class="metric-value">2023–2027</span>
+              <span class="metric-label">Academic Batch</span>
+              <span class="metric-sub">Final-Year B.E. Computer Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 CAPABILITIES & SKILLS SECTION -->
+    <section class="section-wrapper" id="capabilities">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">02 / TECHNICAL CAPABILITIES</span>
+          <h2 class="section-title">The Engineering Toolkit.</h2>
+          <p class="section-lead">A comprehensive overview of languages, frameworks, databases, and DevOps tools applied across production builds.</p>
+        </div>
+
+        <!-- Capability Tabs / Filters -->
+        <div class="capability-tabs reveal" role="tablist" aria-label="Skill Categories">
+          <button class="capability-tab active" data-category="all" role="tab" aria-selected="true">All Technologies</button>
+          <button class="capability-tab" data-category="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button class="capability-tab" data-category="backend" role="tab" aria-selected="false">Backend &amp; APIs</button>
+          <button class="capability-tab" data-category="ai" role="tab" aria-selected="false">AI &amp; LLMs</button>
+          <button class="capability-tab" data-category="database" role="tab" aria-selected="false">Databases</button>
+          <button class="capability-tab" data-category="devops" role="tab" aria-selected="false">DevOps &amp; Tools</button>
+        </div>
+
+        <!-- Capability Grid -->
+        <div class="capability-grid" id="capability-grid">
+
+          <!-- Card 1: Frontend -->
+          <div class="capability-card reveal" data-category="frontend">
+            <div class="card-top">
+              <div class="tech-icon-badge">FE</div>
+              <span class="tech-card-category">Frontend Architecture</span>
+            </div>
+            <h3 class="tech-card-title">Modern Client-Side Engineering</h3>
+            <p class="tech-card-desc">Building responsive, accessible, and high-performance digital interfaces with modern component architectures and state management.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">Alpine.js</span>
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">DOM Manipulation</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+            <div class="tech-card-footer">
+              <span class="highlight-label">Applied in:</span>
+              <span class="highlight-val">ShopKart Storefront, SkillSync UI</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend -->
+          <div class="capability-card reveal" data-category="backend">
+            <div class="card-top">
+              <div class="tech-icon-badge">BE</div>
+              <span class="tech-card-category">Backend Systems</span>
+            </div>
+            <h3 class="tech-card-title">Scalable APIs &amp; Real-Time Streams</h3>
+            <p class="tech-card-desc">Architecting robust HTTP/REST endpoints, real-time Server-Sent Events (SSE), authentication mechanisms, and reliable background tasks.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">RESTful APIs</span>
+              <span class="tech-tag">Server-Sent Events (SSE)</span>
+              <span class="tech-tag">Role-Based Access Control</span>
+              <span class="tech-tag">Java</span>
+            </div>
+            <div class="tech-card-footer">
+              <span class="highlight-label">Applied in:</span>
+              <span class="highlight-val">ShopKart Django Engine, KIN Agent Backend</span>
+            </div>
+          </div>
+
+          <!-- Card 3: AI & Workflows -->
+          <div class="capability-card reveal" data-category="ai">
+            <div class="card-top">
+              <div class="tech-icon-badge">AI</div>
+              <span class="tech-card-category">Artificial Intelligence</span>
+            </div>
+            <h3 class="tech-card-title">Autonomous Agents &amp; LLM Workflows</h3>
+            <p class="tech-card-desc">Integrating Large Language Model APIs with structured JSON output enforcement, automated prompt decomposition, and multi-provider fallback resilience.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">LLM API Integration</span>
+              <span class="tech-tag">Autonomous Agent Backend</span>
+              <span class="tech-tag">Structured Multi-Step DAG</span>
+              <span class="tech-tag">Automatic Fallback Handling</span>
+              <span class="tech-tag">JSON Schema Verification</span>
+              <span class="tech-tag">Prompt Engineering</span>
+            </div>
+            <div class="tech-card-footer">
+              <span class="highlight-label">Applied in:</span>
+              <span class="highlight-val">KIN AI Agent System</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Databases -->
+          <div class="capability-card reveal" data-category="database">
+            <div class="card-top">
+              <div class="tech-icon-badge">DB</div>
+              <span class="tech-card-category">Data Persistence</span>
+            </div>
+            <h3 class="tech-card-title">Relational Data &amp; ACID Integrity</h3>
+            <p class="tech-card-desc">Designing normalized relational schemas, handling transactional integrity for payments and orders, and indexing for optimized queries.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">ORM Mapping</span>
+              <span class="tech-tag">Inventory Rollback Logic</span>
+            </div>
+            <div class="tech-card-footer">
+              <span class="highlight-label">Applied in:</span>
+              <span class="highlight-val">ShopKart Relational DB, Order Invoices</span>
+            </div>
+          </div>
+
+          <!-- Card 5: DevOps & Tools -->
+          <div class="capability-card reveal" data-category="devops">
+            <div class="card-top">
+              <div class="tech-icon-badge">OPS</div>
+              <span class="tech-card-category">Tooling &amp; Infrastructure</span>
+            </div>
+            <h3 class="tech-card-title">Developer Operations &amp; Prototyping</h3>
+            <p class="tech-card-desc">Version control workflows, automated CI/CD pipelines, containerization with Docker, API testing, and collaborative design implementation.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">GitHub</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">CI/CD Pipelines</span>
+              <span class="tech-tag">Postman</span>
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">Linux</span>
+            </div>
+            <div class="tech-card-footer">
+              <span class="highlight-label">Applied in:</span>
+              <span class="highlight-val">Repo CI Automations, Figma Mockups</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 FEATURED PROJECTS (APPLE-STYLE STORYTELLING) -->
+    <section class="section-wrapper projects-section" id="projects">
+      <!-- Antigravity Subtle Ambient Canvas -->
+      <div id="antigravity-ambient-canvas" class="antigravity-ambient-layer" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">03 / FEATURED PRODUCTIONS</span>
+          <h2 class="section-title">Engineered from the Ground Up.</h2>
+          <p class="section-lead">Deep-dive product storytelling into full-stack architecture, real-time event streaming, and autonomous AI systems.</p>
+        </div>
+
+        <!-- Project Quick Switcher -->
+        <div class="project-switcher-wrap reveal">
+          <div class="project-switcher" role="tablist" aria-label="Featured Projects Quick Switcher">
+            <button type="button" class="project-switch-btn active" data-target="project-shopkart" role="tab" aria-selected="true">
+              <span class="switch-idx">01</span>
+              <span class="switch-name">SHOPKART</span>
+              <span class="switch-tag">E-Commerce Platform</span>
+            </button>
+            <button type="button" class="project-switch-btn" data-target="project-kin" role="tab" aria-selected="false">
+              <span class="switch-idx">02</span>
+              <span class="switch-name">KIN</span>
+              <span class="switch-tag">Autonomous AI Agent</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT 1: SHOPKART (Cinematic E-Commerce Storytelling) -->
+        <!-- ======================================================== -->
+        <article class="project-showcase project-shopkart reveal" id="project-shopkart">
+          
+          <!-- Opening View -->
+          <div class="project-opening-block">
+            <div class="project-eyebrow-line">
+              <span class="badge-pill">FEATURED PROJECT 01</span>
+              <span class="project-cat-label">Full-Stack Architecture · Real-Time Systems</span>
+            </div>
+            
+            <h3 class="project-display-title">SHOPKART</h3>
+            <p class="project-display-tagline">Full-Stack E-Commerce Platform</p>
+            <p class="project-display-desc">"A full-stack commerce experience with authentication, real-time inventory, checkout and order management."</p>
+
+            <!-- Subtle Tech Stack -->
+            <div class="project-tech-minimal">
+              <span class="tech-pill-subtle">Django</span>
+              <span class="tech-pill-subtle">React.js</span>
+              <span class="tech-pill-subtle">Tailwind CSS</span>
+              <span class="tech-pill-subtle">SQLite</span>
+              <span class="tech-pill-subtle">REST APIs</span>
+              <span class="tech-pill-subtle">SSE</span>
+            </div>
+
+            <!-- Direct Verified GitHub Link -->
+            <div class="project-action-row">
+              <a href="https://github.com/mythreyan26/ShopKart" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
+                <svg class="icon-sm"><use href="#icon-github"/></svg>
+                <span>View GitHub Repository</span>
+              </a>
+              <span class="project-repo-link">github.com/mythreyan26/ShopKart</span>
+            </div>
+          </div>
+
+          <!-- Continuous Scroll-Driven 5-Stage Story -->
+          <div class="project-story-flow">
+
+            <!-- STAGE 01: Storefront -->
+            <section class="story-chapter" id="shopkart-stage-1">
+              <div class="chapter-narrative">
+                <span class="chapter-number">01</span>
+                <h4 class="chapter-heading">Storefront</h4>
+                <p class="chapter-sub">"Responsive product browsing and shopping experience."</p>
+              </div>
+
+              <!-- Prominent Storefront Visual -->
+              <div class="chapter-visual-wrapper">
+                <div class="storefront-canvas-frame">
+                  <div class="canvas-header-bar">
+                    <div class="canvas-traffic-dots"><span></span><span></span><span></span></div>
+                    <div class="canvas-url-bar">https://shopkart.mythreyan.local/catalog</div>
+                    <div class="canvas-cart-status">
+                      <span>🛒 Cart:</span> <span id="cart-item-count" class="cart-num-pill">0 items</span>
+                    </div>
+                  </div>
+
+                  <div class="storefront-grid-presentation">
+                    <!-- Product 1 -->
+                    <div class="mockup-product-card" data-product-id="1">
+                      <div class="product-thumb thumb-1">
+                        <span class="stock-pill in-stock">8 units in stock</span>
+                      </div>
+                      <div class="product-info">
+                        <h5>Acoustic Studio ANC Pro</h5>
+                        <div class="price-row">
+                          <span class="price">$249.00</span>
+                          <button type="button" class="btn-mock-add">Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="mockup-product-card" data-product-id="2">
+                      <div class="product-thumb thumb-2">
+                        <span class="stock-pill limited-stock">Only 2 left!</span>
+                      </div>
+                      <div class="product-info">
+                        <h5>Mechanical Linear Keyboard</h5>
+                        <div class="price-row">
+                          <span class="price">$129.00</span>
+                          <button type="button" class="btn-mock-add">Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="mockup-product-card" data-product-id="3">
+                      <div class="product-thumb thumb-3">
+                        <span class="stock-pill in-stock">15 units in stock</span>
+                      </div>
+                      <div class="product-info">
+                        <h5>Ultra-Wide 4K IPS Display</h5>
+                        <div class="price-row">
+                          <span class="price">$599.00</span>
+                          <button type="button" class="btn-mock-add">Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chapter-technical-notes">
+                <div class="tech-spec">
+                  <span class="spec-label">Component Architecture</span>
+                  <span class="spec-detail">Built with React 18 and Tailwind CSS. Employs decoupled state hooks and instant client-side filtering for sub-millisecond view updates.</span>
+                </div>
+                <div class="tech-spec">
+                  <span class="spec-label">Responsive Grid</span>
+                  <span class="spec-detail">Fluid CSS grid layout scaling seamlessly across 375px mobile, tablet, and 1440px desktop viewports without horizontal clipping.</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- STAGE 02: Authentication & Role-Based Access -->
+            <section class="story-chapter" id="shopkart-stage-2">
+              <div class="chapter-narrative">
+                <span class="chapter-number">02</span>
+                <h4 class="chapter-heading">Authentication &amp; Role-Based Access</h4>
+                <p class="chapter-sub">"Architectural privilege separation between authenticated shoppers and store administrators."</p>
+              </div>
+
+              <!-- Interactive Distinction View: Customer vs Merchant -->
+              <div class="chapter-visual-wrapper">
+                <div class="rbac-interactive-container">
+                  <div class="rbac-switch-header">
+                    <span class="rbac-switch-label">Select Active Security Context:</span>
+                    <div class="rbac-toggle-group" role="tablist">
+                      <button type="button" class="rbac-toggle-btn active" id="btn-role-customer" role="tab" aria-selected="true">
+                        <span class="role-icon">👤</span> Customer Context
+                      </button>
+                      <button type="button" class="rbac-toggle-btn" id="btn-role-merchant" role="tab" aria-selected="false">
+                        <span class="role-icon">🛡️</span> Merchant / Admin Context
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Customer Panel -->
+                  <div class="rbac-card-panel" id="panel-role-customer">
+                    <div class="panel-meta-bar">
+                      <span class="badge-role customer">Role: Authenticated Customer</span>
+                      <span class="panel-scope">Scope: Browse, cart sessions, personal orders, invoice retrieval</span>
+                    </div>
+                    <div class="role-capability-grid">
+                      <div class="cap-box">
+                        <svg class="icon-sm text-emerald"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Real-Time Catalog Access</h6>
+                          <p>Inspect product inventories and active promotional pricing stream.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-emerald"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Transactional Cart Holding</h6>
+                          <p>Hold item units during checkout with automatic session expiration.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-emerald"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Order History &amp; Receipts</h6>
+                          <p>Access historical purchases and download verified invoice PDFs.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-emerald"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Voluntary Cancellation</h6>
+                          <p>Cancel active checkout sessions with instantaneous inventory release.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Merchant Panel -->
+                  <div class="rbac-card-panel hidden" id="panel-role-merchant">
+                    <div class="panel-meta-bar">
+                      <span class="badge-role admin">Role: Store Administrator / Merchant</span>
+                      <span class="panel-scope">Scope: Catalog mutations, SSE price broadcasts, order state control</span>
+                    </div>
+                    <div class="role-capability-grid">
+                      <div class="cap-box">
+                        <svg class="icon-sm text-cyan"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Catalog CRUD Operations</h6>
+                          <p>Create new SKUs, update specifications, and modify stock thresholds.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-cyan"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Live Price Broadcast Dispatcher</h6>
+                          <p>Push markdown adjustments broadcast immediately to all active SSE clients.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-cyan"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Order State Transitions</h6>
+                          <p>Advance order records through verified states: Placed → Processing → Shipped.</p>
+                        </div>
+                      </div>
+                      <div class="cap-box">
+                        <svg class="icon-sm text-cyan"><use href="#icon-check"/></svg>
+                        <div>
+                          <h6>Restoration Audit Inspection</h6>
+                          <p>Review automatic inventory rollback events triggered by checkout timeouts.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chapter-technical-notes">
+                <div class="tech-spec">
+                  <span class="spec-label">Backend Security</span>
+                  <span class="spec-detail">Django Authentication engine with role-based view decorators ensuring strict API privilege containment.</span>
+                </div>
+                <div class="tech-spec">
+                  <span class="spec-label">Data Boundary</span>
+                  <span class="spec-detail">Customer accounts are isolated to their own sessions; merchant administrative mutations require explicit staff privileges.</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- STAGE 03: Real-Time SSE -->
+            <section class="story-chapter" id="shopkart-stage-3">
+              <div class="chapter-narrative">
+                <span class="chapter-number">03</span>
+                <h4 class="chapter-heading">Real-Time Inventory</h4>
+                <p class="chapter-sub">"Server-Sent Events keep inventory and pricing updates synchronized in real time."</p>
+              </div>
+
+              <!-- Truthful SSE Architecture Visualization: Server ↓ SSE Stream ↓ Client -->
+              <div class="chapter-visual-wrapper">
+                <div class="sse-architecture-layout">
+                  <div class="sse-flow-diagram">
+                    <div class="flow-box">
+                      <span class="flow-badge">BACKEND</span>
+                      <h6>Django Server</h6>
+                      <p>SSE generator yielding events on inventory/price mutations</p>
+                    </div>
+
+                    <div class="flow-stream-connector">
+                      <span class="stream-badge">text/event-stream</span>
+                      <div class="stream-line-active">
+                        <span class="stream-pulse-dot"></span>
+                      </div>
+                      <span class="stream-label">Unidirectional HTTP Stream</span>
+                    </div>
+
+                    <div class="flow-box active-glow">
+                      <span class="flow-badge active">EVENT SOURCE</span>
+                      <h6>SSE Channel</h6>
+                      <p>Persistent HTTP connection with automatic browser reconnect</p>
+                    </div>
+
+                    <div class="flow-stream-connector">
+                      <span class="stream-badge">EventSource API</span>
+                      <div class="stream-line-active">
+                        <span class="stream-pulse-dot delay"></span>
+                      </div>
+                      <span class="stream-label">Zero Polling Overhead</span>
+                    </div>
+
+                    <div class="flow-box">
+                      <span class="flow-badge">FRONTEND</span>
+                      <h6>React Client</h6>
+                      <p>Listens and updates catalog state instantly without page reloads</p>
+                    </div>
+                  </div>
+
+                  <!-- Live Stream Feed Simulation with Truthful Demonstration Label -->
+                  <div class="sse-console-box">
+                    <div class="sse-console-header">
+                      <div class="stream-status-pill">
+                        <span class="ping-pulse"></span>
+                        <span>STREAM ACTIVE: /api/v1/events/inventory-stream</span>
+                      </div>
+                      <button type="button" class="btn-demo-trigger" id="sse-simulate-btn">
+                        <span>Broadcast Simulated Event</span>
+                      </button>
+                    </div>
+
+                    <div class="sse-disclaimer-note">
+                      <span class="disc-icon">ℹ️</span>
+                      <span>Interactive Architecture Demonstration: Simulates client-side SSE packet reception to showcase real-time DOM reactivity.</span>
+                    </div>
+
+                    <div class="sse-event-log" id="sse-log-container">
+                      <div class="log-item"><span class="log-time">18:48:10</span> <span class="log-ev">EVENT [stock_update]</span>: Product #101 (Acoustic Studio ANC Pro) stock updated: 8 → 7 (Order #9042 checkout reserved).</div>
+                      <div class="log-item"><span class="log-time">18:48:25</span> <span class="log-ev">EVENT [price_tick]</span>: Flash discount applied to Product #201 (-10% off). Broadcast to 18 active listeners.</div>
+                      <div class="log-item highlight"><span class="log-time">18:48:42</span> <span class="log-ev">EVENT [auto_restore]</span>: Unpaid session #8821 expired. 1 unit restored to Product #102 automatically.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chapter-technical-notes">
+                <div class="tech-spec">
+                  <span class="spec-label">Why SSE over WebSockets</span>
+                  <span class="spec-detail">Unidirectional HTTP streaming uses standard HTTP/2 transport with built-in reconnect. Ideal for server-to-client notifications without duplex overhead.</span>
+                </div>
+                <div class="tech-spec">
+                  <span class="spec-label">Zero Polling Drift</span>
+                  <span class="spec-detail">Eliminates high-frequency client polling timers. Stock levels update within milliseconds of database signal triggers.</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- STAGE 04: Checkout & Invoices -->
+            <section class="story-chapter" id="shopkart-stage-4">
+              <div class="chapter-narrative">
+                <span class="chapter-number">04</span>
+                <h4 class="chapter-heading">Checkout &amp; Invoices</h4>
+                <p class="chapter-sub">"Transactional order verification and instantaneous invoice record generation."</p>
+              </div>
+
+              <!-- Premium Checkout/Invoice UI Representation: Cart → Checkout → Invoice → Order -->
+              <div class="chapter-visual-wrapper">
+                <div class="checkout-lifecycle-container">
+                  <div class="lifecycle-steps-row">
+                    <div class="life-step completed">
+                      <span class="step-circle">01</span>
+                      <span class="step-label">Cart</span>
+                    </div>
+                    <div class="life-arrow">→</div>
+                    <div class="life-step completed">
+                      <span class="step-circle">02</span>
+                      <span class="step-label">Checkout</span>
+                    </div>
+                    <div class="life-arrow">→</div>
+                    <div class="life-step active">
+                      <span class="step-circle">03</span>
+                      <span class="step-label">Invoice</span>
+                    </div>
+                    <div class="life-arrow">→</div>
+                    <div class="life-step">
+                      <span class="step-circle">04</span>
+                      <span class="step-label">Order</span>
+                    </div>
+                  </div>
+
+                  <!-- Clean Invoice Document -->
+                  <div class="invoice-sheet">
+                    <div class="invoice-sheet-top">
+                      <div>
+                        <span class="inv-brand-mark">SHOPKART INVOICE</span>
+                        <div class="inv-serial">REF: INV-2026-0894 · PAID</div>
+                      </div>
+                      <div class="inv-stamp">
+                        <svg class="icon-xs text-emerald"><use href="#icon-check"/></svg>
+                        <span>TRANSACTION VERIFIED</span>
+                      </div>
+                    </div>
+
+                    <div class="invoice-table-grid">
+                      <div class="inv-head-row">
+                        <span>Item Description</span>
+                        <span>Quantity</span>
+                        <span>Unit Rate</span>
+                        <span class="text-right">Amount</span>
+                      </div>
+                      <div class="inv-item-row">
+                        <span>Acoustic Studio ANC Pro</span>
+                        <span>1</span>
+                        <span>$249.00</span>
+                        <span class="text-right">$249.00</span>
+                      </div>
+                      <div class="inv-item-row">
+                        <span>Express Courier Delivery</span>
+                        <span>1</span>
+                        <span>$15.00</span>
+                        <span class="text-right">$15.00</span>
+                      </div>
+                      <div class="inv-total-row">
+                        <span>Total Paid</span>
+                        <span></span>
+                        <span></span>
+                        <span class="text-right total-accent">$264.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chapter-technical-notes">
+                <div class="tech-spec">
+                  <span class="spec-label">Transactional Integrity</span>
+                  <span class="spec-detail">Uses Django database transactions (`transaction.atomic`) to ensure orders, stock deductions, and invoice generation succeed or rollback as a unified unit.</span>
+                </div>
+                <div class="tech-spec">
+                  <span class="spec-label">Receipt Architecture</span>
+                  <span class="spec-detail">Order records store immutable snapshot pricing and customer shipping data for verifiable receipt and PDF generation.</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- STAGE 05: Stock Restoration -->
+            <section class="story-chapter" id="shopkart-stage-5">
+              <div class="chapter-narrative">
+                <span class="chapter-number">05</span>
+                <h4 class="chapter-heading">Automated Stock Restoration</h4>
+                <p class="chapter-sub">"Resilient order lifecycle state machine that handles cancellations and timeouts by rolling back inventory immediately."</p>
+              </div>
+
+              <!-- State Transition: Order → Stock Reserved → Transaction Failure → Stock Restored -->
+              <div class="chapter-visual-wrapper">
+                <div class="rollback-state-container">
+                  <div class="state-pipeline-row">
+                    <div class="state-node">
+                      <div class="state-index">1</div>
+                      <h6>Order Initiated</h6>
+                      <p>Checkout session begins; stock held on reserve.</p>
+                      <span class="state-tag held">Stock Reserved (-1)</span>
+                    </div>
+
+                    <div class="state-connector">→</div>
+
+                    <div class="state-node">
+                      <div class="state-index">2</div>
+                      <h6>Active Hold</h6>
+                      <p>Session timer counts down during payment step.</p>
+                      <span class="state-tag active">Timer Running</span>
+                    </div>
+
+                    <div class="state-connector">→</div>
+
+                    <div class="state-node warn-node">
+                      <div class="state-index warn">3</div>
+                      <h6>Transaction Failure</h6>
+                      <p>Customer cancels session or payment times out.</p>
+                      <span class="state-tag warn">Session Expired</span>
+                    </div>
+
+                    <div class="state-connector">→</div>
+
+                    <div class="state-node success-node">
+                      <div class="state-index success">4</div>
+                      <h6>Stock Restored</h6>
+                      <p>Django signal triggers atomic stock increment.</p>
+                      <span class="state-tag success">Stock Restored (+1)</span>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Demonstration Trigger -->
+                  <div class="restoration-test-row">
+                    <div class="test-expl">
+                      <strong>Interactive State Machine Test</strong>
+                      <span>Trigger an automatic rollback simulation to observe instant stock restoration.</span>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-sm" id="btn-test-rollback">
+                      <span>Simulate Cart Timeout</span>
+                    </button>
+                    <div class="restoration-live-state" id="rollback-status-text">
+                      <span class="live-dot"></span> State: In Sync (Catalog Stock Verified)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chapter-technical-notes">
+                <div class="tech-spec">
+                  <span class="spec-label">Resilience Mechanism</span>
+                  <span class="spec-detail">Signal-based inventory restitution prevents phantom inventory shortages caused by abandoned carts.</span>
+                </div>
+                <div class="tech-spec">
+                  <span class="spec-label">SSE Broadcaster Integration</span>
+                  <span class="spec-detail">When restitution completes, an SSE packet notifies all active browsing customers of the newly restored inventory unit.</span>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT 2: KIN (Cinematic Autonomous AI Agent Showcase) -->
+        <!-- ======================================================== -->
+        <article class="project-showcase project-kin reveal" id="project-kin">
+          
+          <!-- Opening View -->
+          <div class="project-opening-block">
+            <div class="project-eyebrow-line">
+              <span class="badge-pill">FEATURED PROJECT 02</span>
+              <span class="project-cat-label">Autonomous AI Systems · FastAPI Engine</span>
+            </div>
+
+            <h3 class="project-display-title">KIN</h3>
+            <p class="project-display-tagline">Autonomous AI Agent</p>
+            <p class="project-display-desc">"An autonomous AI agent backend that converts complex prompts into structured multi-step workflows."</p>
+
+            <!-- Subtle Tech Stack -->
+            <div class="project-tech-minimal">
+              <span class="tech-pill-subtle">Python</span>
+              <span class="tech-pill-subtle">FastAPI</span>
+              <span class="tech-pill-subtle">LLM APIs</span>
+              <span class="tech-pill-subtle">JSON</span>
+            </div>
+
+            <!-- Direct Verified GitHub Link -->
+            <div class="project-action-row">
+              <a href="https://github.com/mythreyan26/KIN" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
+                <svg class="icon-sm"><use href="#icon-github"/></svg>
+                <span>View GitHub Repository</span>
+              </a>
+              <span class="project-repo-link">github.com/mythreyan26/KIN</span>
+            </div>
+          </div>
+
+          <!-- The Cinematic AI Workflow -->
+          <div class="kin-architecture-flow">
+            
+            <div class="kin-flow-header">
+              <span class="section-eyebrow">DAG EXECUTION PIPELINE</span>
+              <h4 class="kin-pipeline-title">Deterministic Intent Deconstruction</h4>
+              <p class="kin-pipeline-sub">Complex, unformatted user prompts are tokenized, decomposed into a sequential Directed Acyclic Graph (DAG), and executed with automatic secondary provider fallback resilience.</p>
+              
+              <!-- Interactive Prompt Triggers -->
+              <div class="prompt-chips-wrap">
+                <span class="chips-label">Run interactive test scenario:</span>
+                <button type="button" class="prompt-chip active" data-prompt="ecom">"Audit e-commerce checkout flow &amp; suggest optimizations"</button>
+                <button type="button" class="prompt-chip" data-prompt="api">"Design type-safe FastAPI schema for inventory service"</button>
+                <button type="button" class="prompt-chip" data-prompt="fallback">"Simulate primary LLM timeout &amp; fallback recovery"</button>
+              </div>
+
+              <div class="custom-prompt-row">
+                <input type="text" id="custom-prompt-input" class="custom-prompt-field" placeholder="Or enter custom prompt, e.g. 'Build real-time notification engine with SSE'...">
+                <button type="button" id="custom-prompt-btn" class="btn btn-primary btn-sm">
+                  <span>Run Workflow</span>
+                  <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Five Progressive Nodes: USER PROMPT ↓ AI PROCESSING ↓ TASK PLANNING ↓ WORKFLOW EXECUTION & FALLBACK ↓ STRUCTURED RESULT -->
+            <div class="workflow-dag" id="workflow-dag">
+              <!-- Node 1 -->
+              <div class="dag-node active" id="node-1">
+                <div class="node-indicator">01</div>
+                <div class="node-content">
+                  <span class="node-type">INPUT INGESTION</span>
+                  <h5 class="node-title">USER PROMPT</h5>
+                  <p class="node-desc">Accepts complex prompt via FastAPI REST endpoint.</p>
+                  <div class="node-data" id="dag-data-1">"Audit checkout flow..."</div>
+                </div>
+              </div>
+
+              <div class="dag-connector"><div class="connector-line"></div></div>
+
+              <!-- Node 2 -->
+              <div class="dag-node" id="node-2">
+                <div class="node-indicator">02</div>
+                <div class="node-content">
+                  <span class="node-type">COGNITIVE ENGINE</span>
+                  <h5 class="node-title">AI PROCESSING</h5>
+                  <p class="node-desc">Token analysis, intent classification, and entity extraction.</p>
+                  <div class="node-data" id="dag-data-2">Intent: Code &amp; UX Audit</div>
+                </div>
+              </div>
+
+              <div class="dag-connector"><div class="connector-line"></div></div>
+
+              <!-- Node 3 -->
+              <div class="dag-node" id="node-3">
+                <div class="node-indicator">03</div>
+                <div class="node-content">
+                  <span class="node-type">PLANNER</span>
+                  <h5 class="node-title">TASK PLANNING</h5>
+                  <p class="node-desc">Decomposes prompt into sequential DAG sub-tasks.</p>
+                  <div class="node-data" id="dag-data-3">Generated: 4 Tasks</div>
+                </div>
+              </div>
+
+              <div class="dag-connector"><div class="connector-line"></div></div>
+
+              <!-- Node 4 -->
+              <div class="dag-node" id="node-4">
+                <div class="node-indicator">04</div>
+                <div class="node-content">
+                  <span class="node-type">ROUTER &amp; RESILIENCE</span>
+                  <h5 class="node-title">WORKFLOW EXECUTION</h5>
+                  <p class="node-desc">Executes sub-tasks. Detects 5xx/timeout and auto-routes to fallback.</p>
+                  <div class="node-data" id="dag-data-4">Status: Primary Active</div>
+                </div>
+              </div>
+
+              <div class="dag-connector"><div class="connector-line"></div></div>
+
+              <!-- Node 5 -->
+              <div class="dag-node" id="node-5">
+                <div class="node-indicator">05</div>
+                <div class="node-content">
+                  <span class="node-type">SCHEMA CONTRACT</span>
+                  <h5 class="node-title">STRUCTURED RESULT</h5>
+                  <p class="node-desc">Synthesizes and validates output against strict Pydantic JSON schema.</p>
+                  <div class="node-data" id="dag-data-5">Schema: Validated JSON</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Output Preview -->
+            <div class="agent-output-terminal">
+              <div class="terminal-bar">
+                <div class="terminal-dots"><span></span><span></span><span></span></div>
+                <span class="terminal-title">kin_agent_runtime.json</span>
+                <span class="terminal-latency" id="kin-latency">LATENCY: 240ms · STATUS: 200 OK</span>
+              </div>
+              <pre class="terminal-code"><code id="kin-json-output">{
+  "status": "success",
+  "workflow_id": "wf_8943_audit",
+  "agent": "KIN-Autonomous-Core-v1",
+  "steps_executed": [
+    { "step": 1, "task": "Parse User Intent", "provider": "Primary-LLM", "status": "COMPLETED" },
+    { "step": 2, "task": "Decompose Tasks into DAG", "provider": "Primary-LLM", "status": "COMPLETED" },
+    { "step": 3, "task": "Execute Resilience & Fallback Check", "provider": "FastAPI-Supervisor", "status": "PASSED" },
+    { "step": 4, "task": "Synthesize Structured JSON Response", "provider": "Primary-LLM", "status": "COMPLETED" }
+  ],
+  "result": {
+    "audit_target": "Checkout Funnel",
+    "recommendations": [
+      "Implement optimistic UI updates on add-to-cart",
+      "Persist checkout step in sessionStorage for recovery",
+      "Enable SSE auto-stock reconnection on mobile wake"
+    ]
+  },
+  "fallback_triggered": false
+}</code></pre>
+            </div>
+
+            <!-- Architecture Specifications -->
+            <div class="kin-architecture-specs">
+              <div class="tech-spec">
+                <span class="spec-label">Automated Fallback Router</span>
+                <span class="spec-detail">If the primary model API fails or exceeds execution timeout thresholds, the FastAPI supervisor intercepts the exception and seamlessly dispatches to a secondary model without dropping the client request.</span>
+              </div>
+              <div class="tech-spec">
+                <span class="spec-label">Strict JSON Schema Enforcement</span>
+                <span class="spec-detail">All agent responses are validated against Pydantic schema models before returning to clients, preventing malformed or unparseable outputs.</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 05 INTERNSHIP EXPERIENCE SECTION -->
+    <section class="section-wrapper" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 / PRACTICAL WORK</span>
+          <h2 class="section-title">Internship Experience.</h2>
+          <p class="section-lead">Real-world industry contributions across UI/UX interface design and full-stack web engineering.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Timeline Item 1: SkillSync -->
+          <div class="timeline-card reveal">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-period">Dec 2025 – Jan 2026</span>
+                <span class="timeline-type">Remote Internship</span>
+              </div>
+              <h3 class="timeline-role">UI/UX Design Intern</h3>
+              <h4 class="timeline-company">SkillSync</h4>
+
+              <p class="timeline-summary">
+                Led user experience research and high-fidelity interface design for modern web applications, ensuring seamless alignment between visual design and technical frontend implementation.
+              </p>
+
+              <ul class="timeline-bullets">
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Analyzed end-to-end user flows and identified navigational friction points in web application prototypes.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Designed interactive wireframes and production-ready high-fidelity mockups using <strong>Figma</strong>.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Collaborated closely with software engineers to maintain design consistency and WCAG accessibility standards.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Supported smooth frontend implementation by providing precise component specifications, typography scales, and responsive guidelines.</span>
+                </li>
+              </ul>
+
+              <div class="timeline-skills">
+                <span class="skill-chip">Figma</span>
+                <span class="skill-chip">User Flow Analysis</span>
+                <span class="skill-chip">Wireframing</span>
+                <span class="skill-chip">High-Fidelity Mockups</span>
+                <span class="skill-chip">Design Systems</span>
+                <span class="skill-chip">Accessibility (a11y)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: NSIC Chennai -->
+          <div class="timeline-card reveal">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-period">Mar 2024</span>
+                <span class="timeline-type">On-site Internship · Chennai, India</span>
+              </div>
+              <h3 class="timeline-role">Web Development Intern</h3>
+              <h4 class="timeline-company">NSIC – Technical Services Centre, Chennai</h4>
+
+              <p class="timeline-summary">
+                Built responsive web interfaces and optimized cross-browser reliability at the National Small Industries Corporation technical center.
+              </p>
+
+              <ul class="timeline-bullets">
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Developed modular, responsive web interfaces using semantic <strong>HTML5</strong>, <strong>CSS3 (Flexbox &amp; CSS Grid)</strong>, and <strong>JavaScript</strong>.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Conducted cross-browser testing across Chrome, Firefox, Safari, and Edge to ensure uniform rendering.</span>
+                </li>
+                <li>
+                  <svg class="bullet-icon"><use href="#icon-check"/></svg>
+                  <span>Performed responsive debugging and viewport optimization for seamless user experiences on mobile, tablet, and desktop monitors.</span>
+                </li>
+              </ul>
+
+              <div class="timeline-skills">
+                <span class="skill-chip">HTML5</span>
+                <span class="skill-chip">CSS3 Flexbox &amp; Grid</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">Responsive Web Design</span>
+                <span class="skill-chip">Cross-Browser Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 EDUCATION & CERTIFICATIONS -->
+    <section class="section-wrapper" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">05 / ACADEMIC &amp; CREDENTIALS</span>
+          <h2 class="section-title">Education &amp; Certifications.</h2>
+          <p class="section-lead">Verified academic foundation in Computer Science and industry certifications in full-stack and cloud AI.</p>
+        </div>
+
+        <div class="edu-certs-grid">
+          <!-- Column 1: Education -->
+          <div class="edu-column">
+            <h3 class="col-title reveal">Formal Education</h3>
+
+            <div class="credential-card reveal">
+              <div class="cred-year">2023 – 2027 (Final Year)</div>
+              <h4 class="cred-heading">B.E. in Computer Science &amp; Engineering</h4>
+              <p class="cred-institute">P.S.V. College of Engineering and Technology, Krishnagiri</p>
+              <div class="cred-score-pill">
+                <span class="score-label">Cumulative GPA:</span>
+                <span class="score-value">7.5 / 10</span>
+              </div>
+              <p class="cred-detail">
+                Key subjects: Data Structures &amp; Algorithms, Object-Oriented Programming (Java/Python), Database Management Systems (SQL), Operating Systems, Computer Networks, and Software Engineering.
+              </p>
+            </div>
+
+            <div class="credential-card reveal">
+              <div class="cred-year">Completed May 2023</div>
+              <h4 class="cred-heading">Higher Secondary Certificate (HSC)</h4>
+              <p class="cred-institute">Adarsh Matric Hr. Sec. School, Vaniyambadi</p>
+              <div class="cred-score-pill">
+                <span class="score-label">Final Score:</span>
+                <span class="score-value">70.5%</span>
+              </div>
+              <p class="cred-detail">
+                Strong focus on Mathematics, Physics, Chemistry, and Computer Science fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Certifications -->
+          <div class="certs-column" id="certifications">
+            <h3 class="col-title reveal">Professional Certifications</h3>
+
+            <div class="credential-card cert-card reveal">
+              <div class="cert-icon-strip">
+                <span class="cert-badge-type">DIPLOMA</span>
+              </div>
+              <h4 class="cred-heading">Full Stack Developer Diploma (HDFD)</h4>
+              <p class="cred-institute">CSC Computer Education</p>
+              <p class="cred-detail">
+                Comprehensive practical training covering full-stack web architectures, frontend UI development, database schema modeling, and backend web application programming.
+              </p>
+            </div>
+
+            <div class="credential-card cert-card reveal">
+              <div class="cert-icon-strip">
+                <span class="cert-badge-type cloud">ORACLE CLOUD</span>
+              </div>
+              <h4 class="cred-heading">Oracle Cloud Infrastructure 2025</h4>
+              <p class="cred-institute">AI Foundations Associate</p>
+              <p class="cred-detail">
+                Certified foundational knowledge in artificial intelligence paradigms, machine learning concepts, generative AI workflows, and Oracle Cloud AI infrastructure services.
+              </p>
+            </div>
+
+            <div class="credential-card cert-card reveal">
+              <div class="cert-icon-strip">
+                <span class="cert-badge-type hack">HACKATHON</span>
+              </div>
+              <h4 class="cred-heading">Data Analytics Hackathon</h4>
+              <p class="cred-institute">Adroit Technologies (Naan Mudhalvan)</p>
+              <p class="cred-detail">
+                Competitive data analysis, query modeling, problem-solving, and practical technical presentation under rapid turnaround conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 DEVELOPER ACTIVITY & OPEN SOURCE -->
+    <section class="section-wrapper github-section" id="codebases">
+      <div class="container">
+        <div class="github-card reveal">
+          <div class="github-header">
+            <div>
+              <span class="section-eyebrow">06 / OPEN SOURCE &amp; CODEBASES</span>
+              <h3 class="gh-headline">Verified Repositories</h3>
+              <p class="gh-sub">Public, inspectable codebases demonstrating full-stack engineering, Server-Sent Events, and autonomous agent systems.</p>
+            </div>
+            <a href="https://github.com/mythreyan26" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <svg class="icon-sm"><use href="#icon-github"/></svg>
+              <span>Explore @mythreyan26</span>
+            </a>
+          </div>
+
+          <!-- Verified Repositories Grid -->
+          <div class="repo-showcase-grid">
+            <div class="verified-repo-card">
+              <div class="repo-card-top">
+                <div class="repo-name-group">
+                  <svg class="repo-icon"><use href="#icon-github"/></svg>
+                  <a href="https://github.com/mythreyan26/ShopKart" target="_blank" rel="noopener noreferrer" class="repo-title">mythreyan26/ShopKart</a>
+                </div>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Full-stack e-commerce storefront with Django REST API, React.js, real-time Server-Sent Events (SSE) for inventory and price sync, and automated stock restoration.
+              </p>
+              <div class="repo-card-footer">
+                <span class="repo-lang"><span class="lang-dot python"></span> Python &amp; JavaScript</span>
+                <a href="https://github.com/mythreyan26/ShopKart" target="_blank" rel="noopener noreferrer" class="repo-link">
+                  <span>View Repository</span>
+                  <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="verified-repo-card">
+              <div class="repo-card-top">
+                <div class="repo-name-group">
+                  <svg class="repo-icon"><use href="#icon-github"/></svg>
+                  <a href="https://github.com/mythreyan26/KIN" target="_blank" rel="noopener noreferrer" class="repo-title">mythreyan26/KIN</a>
+                </div>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Autonomous AI agent backend implemented in FastAPI and Python. Decomposes unstructured natural language into structured multi-step DAG workflows with automated fallback handling.
+              </p>
+              <div class="repo-card-footer">
+                <span class="repo-lang"><span class="lang-dot fastapi"></span> Python &amp; FastAPI</span>
+                <a href="https://github.com/mythreyan26/KIN" target="_blank" rel="noopener noreferrer" class="repo-link">
+                  <span>View Repository</span>
+                  <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Summary -->
+          <div class="github-stats-row">
+            <div class="gh-stat">
+              <span class="gh-num">Python · JS · SQL</span>
+              <span class="gh-label">Core Languages</span>
+            </div>
+            <div class="gh-stat">
+              <span class="gh-num">Full-Stack &amp; AI</span>
+              <span class="gh-label">Primary Focus</span>
+            </div>
+            <div class="gh-stat">
+              <span class="gh-num">2 Featured Projects</span>
+              <span class="gh-label">ShopKart &amp; KIN</span>
+            </div>
+            <div class="gh-stat">
+              <span class="gh-num">Tamil &amp; English</span>
+              <span class="gh-label">Language Proficiency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 CONTACT CTA SECTION -->
+    <section class="section-wrapper contact-section" id="contact">
+      <div class="ambient-glow ambient-glow-contact" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-header">
+            <span class="section-eyebrow">07 / GET IN TOUCH</span>
+            <h2 class="contact-headline">Let's build something.</h2>
+            <p class="contact-lead">
+              Open to software development opportunities, internships, and interesting technical projects.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left Info Panel -->
+            <div class="contact-info-panel">
+              <div class="contact-channel">
+                <div class="channel-icon"><svg><use href="#icon-mail"/></svg></div>
+                <div class="channel-details">
+                  <span class="channel-label">Email</span>
+                  <a href="mailto:mythreyan.vnb@gmail.com" class="channel-link">mythreyan.vnb@gmail.com</a>
+                </div>
+                <button class="btn-copy" data-copy="mythreyan.vnb@gmail.com" title="Copy Email" aria-label="Copy Email address">
+                  <svg><use href="#icon-copy"/></svg>
+                </button>
+              </div>
+
+              <div class="contact-channel">
+                <div class="channel-icon"><svg><use href="#icon-phone"/></svg></div>
+                <div class="channel-details">
+                  <span class="channel-label">Phone</span>
+                  <a href="tel:+918524046750" class="channel-link">+91 8524046750</a>
+                </div>
+                <button class="btn-copy" data-copy="+918524046750" title="Copy Phone Number" aria-label="Copy Phone number">
+                  <svg><use href="#icon-copy"/></svg>
+                </button>
+              </div>
+
+              <div class="contact-channel">
+                <div class="channel-icon"><svg><use href="#icon-linkedin"/></svg></div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/mythreyan26" target="_blank" rel="noopener noreferrer" class="channel-link">linkedin.com/in/mythreyan26</a>
+                </div>
+              </div>
+
+              <div class="contact-channel">
+                <div class="channel-icon"><svg><use href="#icon-github"/></svg></div>
+                <div class="channel-details">
+                  <span class="channel-label">GitHub</span>
+                  <a href="https://github.com/mythreyan26" target="_blank" rel="noopener noreferrer" class="channel-link">github.com/mythreyan26</a>
+                </div>
+              </div>
+
+              <div class="contact-channel">
+                <div class="channel-icon"><svg><use href="#icon-map"/></svg></div>
+                <div class="channel-details">
+                  <span class="channel-label">Location</span>
+                  <span class="channel-text">Vaniyambadi, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="contact-cta-buttons">
+                <a href="mailto:mythreyan.vnb@gmail.com" class="btn btn-primary btn-block magnetic-btn">
+                  <svg class="icon-sm"><use href="#icon-mail"/></svg>
+                  <span>Email Me Directly</span>
+                </a>
+                <a href="assets/Mythreyan_S_Resume.pdf" class="btn btn-secondary btn-block magnetic-btn" download="Mythreyan_S_Resume.pdf">
+                  <svg class="icon-sm"><use href="#icon-download"/></svg>
+                  <span>Download Resume PDF</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Message Composer Form -->
+            <div class="contact-form-panel">
+              <form class="quick-form" id="contact-form" novalidate>
+                <h4 class="form-title">Send a Quick Message</h4>
+                <p class="form-sub">Fills and triggers your preferred mail client with structured inquiry data.</p>
+
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject" class="form-label">Inquiry Subject</label>
+                  <select id="form-subject" name="subject" class="form-select">
+                    <option value="Internship / Full-Time Software Opportunity">Software Engineering Opportunity</option>
+                    <option value="Technical Project Collaboration">Project Collaboration</option>
+                    <option value="General Technical Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Message</label>
+                  <textarea id="form-message" name="message" rows="4" class="form-textarea" placeholder="Hello Mythreyan, we'd like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block magnetic-btn">
+                  <span>Send Message via Email</span>
+                  <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+                </button>
+                <p class="form-disclaimer" id="form-status" role="status">
+                  Generates an email addressed to <strong>mythreyan.vnb@gmail.com</strong>.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 09 FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">MYTHREYAN S</span>
+        <p class="footer-tagline">Full-Stack Developer &amp; AI Builder · Final-Year B.E. CSE 2027</p>
+        <p class="footer-copy">© 2026 Mythreyan S. Designed with Apple-inspired architectural precision.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com/mythreyan26" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#icon-github"/></svg></a>
+          <a href="https://linkedin.com/in/mythreyan26" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#icon-linkedin"/></svg></a>
+          <a href="mailto:mythreyan.vnb@gmail.com" aria-label="Email"><svg><use href="#icon-mail"/></svg></a>
+        </div>
+        <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="resume-modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-backdrop" id="resume-modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 id="resume-modal-title">Mythreyan S — Curriculum Vitae</h3>
+          <span class="modal-badge">B.E. CSE · Full-Stack &amp; AI Builder</span>
+        </div>
+        <div class="modal-controls">
+          <a href="assets/Mythreyan_S_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" title="Open PDF in new tab">
+            <svg class="icon-sm"><use href="#icon-external"/></svg>
+            <span>Open in Tab</span>
+          </a>
+          <a href="assets/Mythreyan_S_Resume.pdf" download="Mythreyan_S_Resume.pdf" class="btn btn-primary btn-sm" title="Download PDF file">
+            <svg class="icon-sm"><use href="#icon-download"/></svg>
+            <span>Download</span>
+          </a>
+          <button class="modal-close-btn" id="resume-modal-close" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="pdf-mobile-banner">
+          <span>Mobile preview: View directly in new tab or download:</span>
+          <div class="pdf-mobile-actions">
+            <a href="assets/Mythreyan_S_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Open Fullscreen</a>
+            <a href="assets/Mythreyan_S_Resume.pdf" download="Mythreyan_S_Resume.pdf" class="btn btn-secondary btn-sm">Download</a>
+          </div>
+        </div>
+        <iframe src="assets/Mythreyan_S_Resume.pdf" class="resume-iframe" title="Mythreyan S Resume Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="assets/antigravity.bundle.js"></script>
+</body>
+</html>
