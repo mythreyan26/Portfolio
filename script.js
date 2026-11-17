@@ -392,7 +392,156 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 08 PROJECT 2: KIN (AUTONOMOUS AI AGENT PIPELINE SIMULATOR)
+  // 07B PROJECT 2: CI/CD PIPELINE (GITHUB ACTIONS & DOCKER SIMULATOR)
+  // --------------------------------------------------------------------------
+  const btnRunPipeline = document.getElementById('btn-run-pipeline');
+  const stage1Status = document.getElementById('stage-1-status');
+  const stage2Status = document.getElementById('stage-2-status');
+  const pipelineTelemetryStatus = document.getElementById('pipeline-telemetry-status');
+  const cicdTerminalTitle = document.getElementById('cicd-terminal-title');
+  const cicdLatency = document.getElementById('cicd-latency');
+  const cicdTerminalOutput = document.getElementById('cicd-terminal-output');
+  const probeButtons = document.querySelectorAll('.probe-btn');
+
+  const cicdEndpointData = {
+    health: {
+      cmd: 'curl -s http://localhost:5000/api/health',
+      latency: 'HTTP/1.1 200 OK · 12ms',
+      json: {
+        status: "healthy",
+        service: "flask-rest-api",
+        timestamp: new Date().toISOString(),
+        version: "1.0.0",
+        python: "3.12",
+        checks: {
+          pytest_suite: "24/24 PASSING (100%)",
+          container_security: "non-root user (appuser:10001)",
+          docker_healthcheck: "PASSING",
+          secrets_management: "GitHub Actions Secrets (zero leak)"
+        },
+        deployment: {
+          engine: "Gunicorn / Flask",
+          registry: "Docker Hub (mythreyan26/flask-cicd-api:latest)",
+          orchestration: "Docker Compose"
+        }
+      }
+    },
+    info: {
+      cmd: 'curl -s http://localhost:5000/api/info',
+      latency: 'HTTP/1.1 200 OK · 8ms',
+      json: {
+        project: "CI/CD Pipeline with GitHub Actions & Docker",
+        author: "Mythreyan S",
+        framework: "Flask 3.0 + Gunicorn WSGI",
+        python_version: "3.12-alpine",
+        pipeline: {
+          type: "Two-Stage Gated Delivery",
+          ci_runner: "GitHub Actions (ubuntu-latest)",
+          test_runner: "Pytest (24 unit/integration tests)",
+          container_builder: "Docker Buildx Multi-Stage"
+        },
+        docker_hub: "https://hub.docker.com/u/mythreyan26",
+        dashboard: "Interactive monitoring UI with live health polling"
+      }
+    },
+    container: {
+      cmd: "docker inspect --format='{{json .State.Health}}' flask-api",
+      latency: 'LOCAL DOCKER DAEMON · 4ms',
+      json: {
+        Status: "healthy",
+        FailingStreak: 0,
+        Log: [
+          {
+            Start: new Date().toISOString(),
+            ExitCode: 0,
+            Output: "HTTP/1.1 200 OK - Service Healthy (curl --fail http://localhost:5000/api/health)\n"
+          }
+        ],
+        SecurityOpt: [
+          "no-new-privileges:true",
+          "user:appuser(10001:10001)"
+        ]
+      }
+    }
+  };
+
+  probeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      probeButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const ep = btn.getAttribute('data-endpoint');
+      const data = cicdEndpointData[ep];
+      if (!data) return;
+
+      if (cicdTerminalTitle) cicdTerminalTitle.textContent = data.cmd;
+      if (cicdLatency) cicdLatency.textContent = data.latency;
+      if (cicdTerminalOutput) cicdTerminalOutput.textContent = JSON.stringify(data.json, null, 2);
+
+      showToast(`Probed ${data.cmd.split(' ')[2] || ep}: 200 OK`);
+    });
+  });
+
+  if (btnRunPipeline) {
+    let isPipelineRunning = false;
+    btnRunPipeline.addEventListener('click', () => {
+      if (isPipelineRunning) return;
+      isPipelineRunning = true;
+      btnRunPipeline.disabled = true;
+      btnRunPipeline.innerHTML = '<span>Running CI Pipeline...</span>';
+
+      if (pipelineTelemetryStatus) {
+        pipelineTelemetryStatus.innerHTML = '<span class="live-dot" style="background:#f59e0b;box-shadow:0 0 8px #f59e0b;"></span> Pipeline: Stage 1 Running Pytest (24 tests)...';
+      }
+      if (stage1Status) {
+        stage1Status.innerHTML = '<span class="ping-pulse" style="background:#f59e0b;"></span> EXECUTING PYTEST';
+      }
+
+      setTimeout(() => {
+        if (stage1Status) {
+          stage1Status.innerHTML = '<span class="ping-pulse"></span> 24/24 PASSING ✓';
+        }
+        if (pipelineTelemetryStatus) {
+          pipelineTelemetryStatus.innerHTML = '<span class="live-dot" style="background:#38bdf8;box-shadow:0 0 8px #38bdf8;"></span> Stage 2: Building Docker image & publishing to Docker Hub...';
+        }
+        if (stage2Status) {
+          stage2Status.innerHTML = '<span class="ping-pulse" style="background:#38bdf8;"></span> DOCKER BUILD & PUSH';
+        }
+      }, 900);
+
+      setTimeout(() => {
+        if (stage2Status) {
+          stage2Status.innerHTML = '<span class="ping-pulse"></span> DOCKER HUB SYNCED ✓';
+        }
+        if (pipelineTelemetryStatus) {
+          pipelineTelemetryStatus.innerHTML = '<span class="live-dot"></span> Pipeline Status: All Stages Green (Image Live on Docker Hub)';
+        }
+        btnRunPipeline.disabled = false;
+        btnRunPipeline.innerHTML = '<span>Simulate Pipeline Run</span> <svg class="icon-sm"><use href="#icon-arrow-right"/></svg>';
+        isPipelineRunning = false;
+
+        if (cicdTerminalTitle) cicdTerminalTitle.textContent = 'github-actions-runner — workflow completed';
+        if (cicdLatency) cicdLatency.textContent = 'RUN DURATION: 1m 24s · 0 FAILURES';
+        if (cicdTerminalOutput) {
+          cicdTerminalOutput.textContent = JSON.stringify({
+            workflow: "ci-cd-pipeline.yml",
+            trigger: "git push origin main",
+            stages: [
+              { stage: "test", runner: "pytest", tests_passed: 24, tests_failed: 0, status: "SUCCESS" },
+              { stage: "build_and_publish", registry: "Docker Hub", image: "mythreyan26/flask-cicd-api:latest", digest: "sha256:4f8e91a27b8c...", status: "SUCCESS" },
+              { stage: "health_check", check: "container health probe", status: "HEALTHY" }
+            ],
+            conclusion: "SUCCESSFUL_DEPLOYMENT"
+          }, null, 2);
+        }
+
+        showToast('Pipeline success: 24/24 Pytest passed · Docker image published!');
+      }, 1900);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 08 PROJECT 3: KIN (AUTONOMOUS AI AGENT PIPELINE SIMULATOR)
   // --------------------------------------------------------------------------
   const promptChips = document.querySelectorAll('.prompt-chip');
   const dagNodes = document.querySelectorAll('.dag-node');
@@ -400,88 +549,91 @@ document.addEventListener('DOMContentLoaded', () => {
   const kinLatency = document.getElementById('kin-latency');
 
   const simulations = {
-    ecom: {
-      prompt: '"Audit e-commerce checkout flow & suggest optimizations"',
+    research: {
+      prompt: '"Search web & summarize latest AI models"',
       nodes: [
-        'Intent: Checkout Funnel Audit',
-        'Decompose: 4 Verification Steps',
-        'Executing: Primary LLM Active',
-        'Schema: Validated JSON Response'
+        'Task: 3-Stage Plan',
+        'WebSearch: Live Query',
+        'Sandboxed Python: Run',
+        'Limits: Guard Validated'
       ],
-      latency: 'LATENCY: 240ms · STATUS: 200 OK',
+      latency: 'LATENCY: 220ms · STATUS: 200 OK',
       json: `{
   "status": "success",
-  "workflow_id": "wf_8943_audit",
-  "agent": "KIN-Autonomous-Core-v1",
+  "workflow_id": "wf_gemini_kin_9021",
+  "agent": "KIN-Gemini-Autonomous-Core",
+  "model": "Google Gemini API",
   "steps_executed": [
-    { "step": 1, "task": "Parse User Intent", "provider": "Primary-LLM", "status": "COMPLETED" },
-    { "step": 2, "task": "Decompose Tasks into DAG", "provider": "Primary-LLM", "status": "COMPLETED" },
-    { "step": 3, "task": "Execute Resilience & Fallback Check", "provider": "FastAPI-Supervisor", "status": "PASSED" },
-    { "step": 4, "task": "Synthesize Structured JSON Response", "provider": "Primary-LLM", "status": "COMPLETED" }
+    { "step": 1, "task": "Plan research strategy", "tool": "Gemini-Planner", "status": "COMPLETED" },
+    { "step": 2, "task": "Execute live web search", "tool": "WebSearchTool", "status": "COMPLETED" },
+    { "step": 3, "task": "Run sandboxed parsing script", "tool": "SandboxedPythonRunner", "status": "COMPLETED" },
+    { "step": 4, "task": "Enforce iteration cap & timeouts", "tool": "ResourceGuard", "status": "PASSED" },
+    { "step": 5, "task": "Write immutable audit log", "tool": "AuditLogger", "status": "SAVED" }
   ],
   "result": {
-    "audit_target": "Checkout Funnel",
-    "recommendations": [
-      "Implement optimistic UI updates on add-to-cart",
-      "Persist checkout step in sessionStorage for recovery",
-      "Enable SSE auto-stock reconnection on mobile wake"
-    ]
+    "summary": "Retrieved and synthesized documentation across targeted web sources.",
+    "iterations_used": 3,
+    "max_iteration_cap": 10,
+    "timeout_seconds": 30,
+    "audit_log": "logs/audit_9021.jsonl"
   },
-  "fallback_triggered": false
+  "sandbox_violations": 0
 }`
     },
-    api: {
-      prompt: '"Design type-safe FastAPI schema for inventory service"',
+    python: {
+      prompt: '"Execute sandboxed Python script for data stats"',
       nodes: [
-        'Intent: Schema Generation',
-        'DAG: Pydantic v2 Models',
-        'Validation: Static Type Check',
-        'Output: Typed API Contract'
+        'Plan: Stat Analysis',
+        'Sandbox: Isolated FS',
+        'Python 3.12: Subprocess',
+        'Audit: Output Verified'
       ],
-      latency: 'LATENCY: 185ms · STATUS: 200 OK',
+      latency: 'LATENCY: 175ms · STATUS: 200 OK',
       json: `{
   "status": "success",
-  "workflow_id": "wf_4401_fastapi_schema",
-  "agent": "KIN-Autonomous-Core-v1",
+  "workflow_id": "wf_python_sandbox_4402",
+  "agent": "KIN-Gemini-Autonomous-Core",
+  "model": "Google Gemini API",
   "steps_executed": [
-    { "step": 1, "task": "Analyze Domain Entities (Product, Stock, Reservation)", "provider": "Primary-LLM", "status": "COMPLETED" },
-    { "step": 2, "task": "Generate Pydantic BaseModel definitions", "provider": "Primary-LLM", "status": "COMPLETED" },
-    { "step": 3, "task": "Embed UUID & Timestamp validators", "provider": "FastAPI-Supervisor", "status": "PASSED" }
+    { "step": 1, "task": "Generate Python statistics script", "tool": "Gemini-Planner", "status": "COMPLETED" },
+    { "step": 2, "task": "Mount sandboxed workspace directory", "tool": "SandboxMount", "status": "COMPLETED" },
+    { "step": 3, "task": "Execute Python in restricted subprocess", "tool": "SandboxedPythonRunner", "status": "COMPLETED" },
+    { "step": 4, "task": "Validate execution timeout (<5s)", "tool": "TimeoutGuard", "status": "PASSED" }
   ],
   "result": {
-    "module": "inventory_schemas.py",
-    "classes": [
-      "class StockReservationRequest(BaseModel): item_id: UUID; quantity: int = Field(gt=0)",
-      "class StockReservationResponse(BaseModel): reservation_id: UUID; expires_at: datetime; status: Literal['RESERVED', 'INSUFFICIENT']"
-    ]
+    "stdout": "Dataset processed: 10,000 records. Mean: 42.8, StdDev: 3.14.",
+    "execution_time_seconds": 0.41,
+    "sandbox_exit_code": 0
   },
-  "fallback_triggered": false
+  "audit_trail_recorded": true
 }`
     },
-    fallback: {
-      prompt: '"Simulate primary LLM timeout & fallback recovery"',
+    timeout: {
+      prompt: '"Simulate timeout guard & iteration cap enforcement"',
       nodes: [
-        'Intent: Stress & Fallback Test',
-        'Primary API: 504 Gateway Timeout',
-        'Auto-Reroute: Secondary Fallback LLM',
-        'Recovery: 100% Request Restored'
+        'Plan: Safety Trigger',
+        'Watchdog: Loop Cap (10)',
+        'Guard: SIGKILL Enforced',
+        'Audit: Log Recorded'
       ],
-      latency: 'LATENCY: 410ms · STATUS: 200 OK (FALLBACK)',
+      latency: 'LATENCY: 310ms · STATUS: 200 OK (GUARDED)',
       json: `{
-  "status": "success",
-  "workflow_id": "wf_1109_fallback_recovery",
-  "agent": "KIN-Autonomous-Core-v1",
+  "status": "guarded_termination",
+  "workflow_id": "wf_safety_timeout_8819",
+  "agent": "KIN-Gemini-Autonomous-Core",
+  "model": "Google Gemini API",
   "steps_executed": [
-    { "step": 1, "task": "Dispatch to Primary Provider", "provider": "Primary-LLM", "status": "TIMEOUT_504" },
-    { "step": 2, "task": "FastAPI Fallback Interceptor Triggered", "provider": "Supervisor", "status": "REROUTED" },
-    { "step": 3, "task": "Dispatch to Backup Provider", "provider": "Fallback-LLM-Secondary", "status": "COMPLETED" },
-    { "step": 4, "task": "Reconstruct Validated Output", "provider": "Fallback-LLM-Secondary", "status": "COMPLETED" }
+    { "step": 1, "task": "Dispatch task with iteration cap: 10", "tool": "ResourceGuard", "status": "ACTIVE" },
+    { "step": 2, "task": "Iteration watchdog detected cap threshold", "tool": "IterationCapGuard", "status": "INTERCEPTED" },
+    { "step": 3, "task": "Enforce execution timeout cutoff (30s)", "tool": "TimeoutSupervisor", "status": "ENFORCED" },
+    { "step": 4, "task": "Record security event in audit journal", "tool": "AuditLogger", "status": "SAVED" }
   ],
   "result": {
-    "recovery_message": "Zero client-side interruption. Fallback model seamlessly completed query.",
-    "audit_event_logged": true
+    "guard_triggered": "IterationCap & ExecutionTimeout",
+    "action": "Graceful process termination without resource exhaustion",
+    "system_health": "Uncompromised (100% sandbox integrity preserved)"
   },
-  "fallback_triggered": true
+  "audit_logged": true
 }`
     }
   };
@@ -535,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const executeCustomPrompt = () => {
     clearDagTimeouts();
-    const rawPrompt = customPromptInput?.value?.trim() || 'Build real-time notification engine with SSE';
+    const rawPrompt = customPromptInput?.value?.trim() || 'Plan multi-step task and analyze files with Gemini API';
     promptChips.forEach(c => c.classList.remove('active'));
 
     dagNodes.forEach((node, i) => {
@@ -543,10 +695,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const dataEl = document.getElementById(`dag-data-${i + 1}`);
       if (dataEl) {
         if (i === 0) dataEl.textContent = `"${rawPrompt.slice(0, 24)}..."`;
-        if (i === 1) dataEl.textContent = 'Intent: Custom LLM Synthesis';
-        if (i === 2) dataEl.textContent = 'DAG: 3 Sub-Tasks Generated';
-        if (i === 3) dataEl.textContent = 'Execution: Async Fast-Path';
-        if (i === 4) dataEl.textContent = 'Output: Validated Schema';
+        if (i === 1) dataEl.textContent = 'Gemini: Plan Decomposed';
+        if (i === 2) dataEl.textContent = 'WebSearch: Query Active';
+        if (i === 3) dataEl.textContent = 'Runner: Python Sandboxed';
+        if (i === 4) dataEl.textContent = 'Audit: Trace Recorded';
       }
     });
 
@@ -559,24 +711,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (kinJsonOutput) {
       kinJsonOutput.textContent = JSON.stringify({
         status: "success",
-        workflow_id: `wf_${Math.floor(1000 + Math.random() * 9000)}_custom`,
-        agent: "KIN-Autonomous-Core-v1",
+        workflow_id: `wf_gemini_${Math.floor(1000 + Math.random() * 9000)}_custom`,
+        agent: "KIN-Gemini-Autonomous-Core",
+        model: "Google Gemini API",
         input_prompt: rawPrompt,
         steps_executed: [
-          { step: 1, task: "Tokenize & Parse Custom Intent", status: "COMPLETED" },
-          { step: 2, task: "Generate Execution Graph", status: "COMPLETED" },
-          { step: 3, task: "Enforce Schema Integrity & Security", status: "PASSED" }
+          { step: 1, task: "Plan task steps with Gemini", tool: "Gemini-Planner", status: "COMPLETED" },
+          { step: 2, task: "Perform web retrieval", tool: "WebSearchTool", status: "COMPLETED" },
+          { step: 3, task: "Execute sandboxed Python script", tool: "SandboxedPythonRunner", status: "COMPLETED" },
+          { step: 4, task: "Enforce execution timeouts & iteration cap", tool: "ResourceGuard", status: "PASSED" },
+          { step: 5, task: "Write audit log entry", tool: "AuditLogger", status: "SAVED" }
         ],
         result: {
-          generated_architecture: "Verified System Design",
+          execution_summary: "Task planned and executed with full sandbox isolation.",
           status_code: 200,
-          recommendation: "Architecture validated against FastAPI & SSE specifications."
+          iterations_used: 2,
+          iteration_cap: 10,
+          audit_logged: true
         },
-        fallback_triggered: false
+        sandbox_violations: 0
       }, null, 2);
     }
 
-    showToast(`Custom workflow executed: "${rawPrompt.slice(0, 25)}..."`);
+    showToast(`Custom task executed: "${rawPrompt.slice(0, 25)}..."`);
   };
 
   if (customPromptBtn) {
@@ -681,8 +838,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // 10 VERIFIED CODEBASES & REPOSITORY SHOWCASE
   // --------------------------------------------------------------------------
-  // Static verified repository cards for mythreyan26/ShopKart and mythreyan26/KIN
-  // link directly to authentic GitHub production repos with real metrics.
+  // Static verified repository cards for mythreyan26/ShopKart, CI/CD Pipeline, and mythreyan26/KIN
+  // link directly to authentic GitHub & Docker Hub production repos with real metrics.
 
 
   // --------------------------------------------------------------------------
